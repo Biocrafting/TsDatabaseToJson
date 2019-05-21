@@ -54,6 +54,8 @@ function convertDbInfoToJson(dbInformations) {
 }
 
 function writeToFile(path, string) {
+    path += 'resultFile' + Date.now() + '.json';
+
     return new Promise(function(resolve, reject) {
         fs.writeFile(path, string, (err) => {
             if (err) throw err;
