@@ -8,7 +8,7 @@ loadFromFile(configPath)
     .then(getDatabaseInformations)
     .then(convertDbInfoToJson)
     .then(jsonString => writeToFile(resultPath, jsonString))
-    .then(console.log('The file has been saved!'))
+    .then()
 
 
 /**
@@ -38,7 +38,7 @@ function getDatabaseInformations(dbconfig) {
         // TODO: Put some real sql stuff here.
         connection.query('GIVE ME SOME SQL STUFF TO WORK WITH', function (error, results, fields) {
             if (error) throw error;
-            resolve(results)
+            else resolve(results)
         });
 
         connection.end();
@@ -57,6 +57,7 @@ function writeToFile(path, string) {
     return new Promise(function(resolve, reject) {
         fs.writeFile(path, string, (err) => {
             if (err) throw err;
+            console.log('File as been saved!')
             resolve();
           });        
     })     
