@@ -1,0 +1,14 @@
+{
+  "name": "teamspeakdatabasechannelparser",
+  "version": "1.0.0",
+  "description": "Parses some database entries from a mysql teamspeak database to an easy readable file format like json.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ZwergB",
+  "license": "MIT",
+  "dependencies": {
+    "mysql": "^2.17.1"
+  }
+}
